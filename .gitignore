@@ -1,0 +1,3 @@
+## 各環境のバックアップを無視
+ubuntu_bash/backup/*
+windows_gitbash_on_scoop/backup/*
