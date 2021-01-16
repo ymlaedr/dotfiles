@@ -1,0 +1,20 @@
+Host ysvm-makoto
+    HostName mlaedrs.dip.jp
+    Port     32596
+    User     makoto
+    IdentityFile "~/.ssh/rsa4096-ysvm-makoto"
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    Compression yes
+
+Host ysvrpi4-ubuntu
+    HostName mlaedrs.dip.jp
+    Port     11416
+    User     ubuntu
+    IdentityFile "~/.ssh/rsa8192-ysvrpi4-ubuntu"
+
+Host github.com
+    HostName github.com
+    Port     22
+    User     git
+    IdentityFile "~/.ssh/rsa8192-private-gh-ymlaedr"
