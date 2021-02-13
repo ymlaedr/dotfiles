@@ -16,3 +16,19 @@ function runx() {
     fi
 }
 runx
+
+function upload_over_ssh() {
+  START_TIME=`date +%s`
+  echo "tar czf - -C $1 $2 | ssh $3 'tar zxvf - -C $4'"
+  tar czf - -C $1 $2 | ssh $3 "tar zxvf - -C $4"
+  END_TIME=`date +%s`
+  echo Execution time: $((END_TIME - START_TIME))
+}
+
+function download_over_ssh() {
+  START_TIME=`date +%s`
+  echo "ssh $1 'tar czf - -C $2 $3' | tar zxvf - -C $4"
+  ssh ${1} "tar czf - -C $2 $3" | tar zxvf - -C $4
+  END_TIME=`date +%s`
+  echo Execution time: $((END_TIME - START_TIME))
+}
