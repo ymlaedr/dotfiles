@@ -69,6 +69,6 @@ function replace() {
 
 mkdir ${BACKUP_DIR}
 
-replace ${HOME}/.bashrc ${WORK_DIR}/bashrc
-replace ${HOME}/.ssh/config ${WORK_DIR}/ssh_config
-replace ${HOME}/config.xlaunch ${WORK_DIR}/config_xlaunch.xml
+replace ${HOME}/.bashrc ${WORK_DIR}/envfiles/bashrc
+replace ${HOME}/.ssh/config ${WORK_DIR}/envfiles/ssh_config
+replace ${HOME}/config.xlaunch ${WORK_DIR}/envfiles/config_xlaunch.xml
