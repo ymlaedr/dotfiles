@@ -4,7 +4,7 @@
 # ============
 #
 # windowsへscoop経由でGitBashと各種設定ファイルをインストールする
-# 
+#
 #
 # Usage:
 #
@@ -98,16 +98,19 @@ function replace() {
 ## -----------------------------------------------------------------------------
 
 case $1 in
-  "install")
-    mkdir ${BACKUP_DIR}
-    replace ${HOME}/.bashrc ${WORK_DIR}/envfiles/bashrc
-    replace ${HOME}/.ssh/config ${WORK_DIR}/envfiles/ssh_config
-    replace ${HOME}/config.xlaunch ${WORK_DIR}/envfiles/config_xlaunch.xml
-    ;;
-  "help" | "-h" | "--help") 
-    show_help;;
-  "")
-    echo "実行したい処理を第一引数で渡してください。";;
-  *) 
-    echo "該当する処理がありません。"
+    "setup")
+        mkdir ${BACKUP_DIR}
+        replace ${HOME}/.bashrc ${WORK_DIR}/envfiles/bashrc
+        replace ${HOME}/.ssh/config ${WORK_DIR}/envfiles/ssh_config
+        ;;
+    "setup_extra")
+        install_scoop_extras_apps
+        replace ${HOME}/config.xlaunch ${WORK_DIR}/envfiles/config_xlaunch.xml
+        ;;
+    "help" | "-h" | "--help")
+        show_help;;
+    "")
+        echo "実行したい処理を第一引数で渡してください。";;
+    *)
+        echo "該当する処理がありません。"
 esac
