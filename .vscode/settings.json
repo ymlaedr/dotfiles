@@ -1,0 +1,10 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "extensions.ignoreRecommendations": false,
+  "[bat]": {
+    "files.encoding": "shiftjis",
+    "files.eol": "\r\n"
+  }
+}
