@@ -8,7 +8,7 @@
 #
 # Usage:
 #
-#     install.sh [-h|--help|help|install]
+#     install.sh [-h|--help|help|setup|setup_extra]
 
 
 
